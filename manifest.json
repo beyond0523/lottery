@@ -3,7 +3,7 @@
 	"id": "H5D14B258",/*应用的标识，创建应用时自动生成，勿手动修改*/
 	"name": "lottery",/*应用名称，程序桌面图标名称*/
 	"version": {
-		"name": "1.0.0",/*应用版本名称*/
+		"name": "1.0.1",/*应用版本名称*/
 		"code": "83"
 	},
 	"description": "",/*应用描述信息*/
@@ -56,9 +56,7 @@
          "Invocation": {
             "description": "使用Native.js能力"
         },
-        "Messaging": {
-            "description": "访问通讯能力"
-        },
+        
         "Orientation": {
             "description": "访问方向感应器"
         },
@@ -189,5 +187,33 @@
 				}
 			}
 		}
-	}
+	},
+	"dependencies":{
+	  "pages": {
+	    "index.html": {
+	      "href": "index.html",
+	      "resources": [
+	        "css/mui.min.css",
+	        "fonts/mui.ttf",
+	        "css/icons-extra.css",
+	        "fonts/mui-icons-extra.ttf",
+	        "js/mui.min.js"
+	      ],
+	      "priority": 0,
+	      "refer": []
+	    }
+	  },
+	  "idle": {
+	    "resources": [
+	      "js/mui.js",
+	      "css/mui.css",
+	      "README.md"
+	    ]
+	  }
+	},
+	"unpackage":[
+	  "css/mui.css",
+	  "js/mui.js",
+	  "README.md"
+	]
 }
