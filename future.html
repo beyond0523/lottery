@@ -23,7 +23,8 @@
 				color: #675d11;
 				font-size: 14px;
 			}
-			.result tr.last{
+			
+			.result tr.last {
 				color: #675d11;
 			}
 			
@@ -257,7 +258,7 @@
 						var html = "",
 							len = t._result.length,
 							aFirst = t._result[0];
-						html += "<tr><td>"+aFirst.sDate.substr(-3)+"</td><td>"+aFirst.sResult+"</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><tr>"
+						html += "<tr><td>" + aFirst.sDate.substr(-3) + "</td><td>" + aFirst.sResult + "</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><td>-</td><tr>"
 						for(var i = 1; i <= len - 2; i++) {
 
 							(function(ii) {
@@ -482,18 +483,18 @@
 					});
 				});
 
-				//				$.plusReady(function() {
-				$(doc).on("tap", "#Jquery", function() {
-					// 判断网络连接
-					//						if(plus.networkinfo.getCurrentType() == plus.networkinfo.CONNECTION_NONE) {
-					//							return $.toast("连接网络失败，请稍后再试");
-					//						}
-					var btn = $(this);
-					btn.button("loading");
-					Data.getData(btn);
-					FivStar.renderResult();
+				$.plusReady(function() {
+					$(doc).on("tap", "#Jquery", function() {
+						// 判断网络连接
+						if(plus.networkinfo.getCurrentType() == plus.networkinfo.CONNECTION_NONE) {
+							return $.toast("连接网络失败，请稍后再试");
+						}
+						var btn = $(this);
+						btn.button("loading");
+						Data.getData(btn);
+						FivStar.renderResult();
+					});
 				});
-				//				});
 			})(mui, document);
 		</script>
 	</body>
